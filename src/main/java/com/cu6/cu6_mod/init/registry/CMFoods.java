@@ -1,0 +1,9 @@
+package com.cu6.cu6_mod.init.registry;
+
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
+
+public class CMFoods {
+    public static final FoodProperties monster = new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 1), 0.6F).build();
+}
