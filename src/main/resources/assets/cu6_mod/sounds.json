@@ -1,0 +1,9 @@
+{
+  "xun_sound": {
+    "subtitle": "sounds.cu6_mod.xun_sound",
+    "sounds":[
+        "cu6_mod:xun_sound_1",
+        "cu6_mod:xun_sound_2"
+    ]
+  }
+}

@@ -1,13 +1,14 @@
 package com.cu6.cu6_mod.common.block;
 
+import com.cu6.cu6_mod.init.registry.CMSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -24,6 +25,31 @@ public class XunSkullBlock extends Block {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 
+    }
+    @Override
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+        if (level.isClientSide) return;
+        if (fromPos.equals(pos.below())) {
+            this.checkAndPlaySound(level, pos);
+        }
+    }
+    private void checkAndPlaySound(Level level, BlockPos pos) {
+        if (level.isClientSide) return;
+
+        BlockPos belowPos = pos.below();
+        BlockState belowState = level.getBlockState(belowPos);
+
+        if (belowState.getBlock() instanceof NoteBlock) {
+
+            level.playSound(
+                    null,
+                    pos,
+                    CMSounds.XUN_SOUND.get(),
+                    SoundSource.BLOCKS,
+                    1.0f,
+                    1.0f
+            );
+        }
     }
 
     @Override

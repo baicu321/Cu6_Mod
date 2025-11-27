@@ -14,6 +14,12 @@
     "facing=west": {
       "model": "cu6_mod:block/xun",
       "y": 270
+    },
+    "facing=up": {
+      "model": "cu6_mod:block/xun"
+    },
+    "facing=down": {
+      "model": "cu6_mod:block/xun"
     }
   }
 }
