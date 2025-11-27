@@ -13,10 +13,11 @@ public class CMCreativeModeTabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = TABS.register("cu6_group", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.tab.cu6"))
-            .icon(() -> CMItems.monster.get().getDefaultInstance())
+            .icon(() -> CMItems.bat.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(CMItems.monster.get());
                 output.accept(CMItems.xun_block_item.get());
+                output.accept(CMItems.bat.get());
             })
             .build());
     public static void register(IEventBus bus){

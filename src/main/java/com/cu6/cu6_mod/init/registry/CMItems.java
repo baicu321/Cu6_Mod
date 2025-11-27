@@ -2,6 +2,7 @@ package com.cu6.cu6_mod.init.registry;
 
 import com.cu6.cu6_mod.Cu6Mod;
 import com.cu6.cu6_mod.common.block.XunSkullBlock;
+import com.cu6.cu6_mod.common.item.BatItem;
 import com.cu6.cu6_mod.common.item.MonsterItem;
 import com.cu6.cu6_mod.common.item.XunSkullBlockItem;
 import net.minecraft.world.item.Item;
@@ -19,7 +20,7 @@ public class CMItems {
         public static final DeferredItem<Item> xun_block_item = ITEMS.register("xun_block_item",
             () -> new XunSkullBlockItem((XunSkullBlock) CMBlocks.xun.get(),
                     new Item.Properties().stacksTo(1)));
-
+        public static final DeferredItem<Item> bat = ITEMS.register("bat",()-> new BatItem(new Item.Properties().stacksTo(1)));
 
 
 

@@ -3,7 +3,6 @@ package com.cu6.cu6_mod.common.block;
 import com.cu6.cu6_mod.init.registry.CMSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;

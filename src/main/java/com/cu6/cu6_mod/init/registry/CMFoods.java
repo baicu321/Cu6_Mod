@@ -5,5 +5,5 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class CMFoods {
-    public static final FoodProperties monster = new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 1), 0.6F).build();
+    public static final FoodProperties monster = new FoodProperties.Builder().nutrition(1).saturationModifier(1).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 1), 0.6F).build();
 }
