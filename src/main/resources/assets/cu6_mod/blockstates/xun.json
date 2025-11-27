@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cu6_mod:block/xun",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cu6_mod:block/xun"
+    },
+    "facing=south": {
+      "model": "cu6_mod:block/xun",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cu6_mod:block/xun",
+      "y": 270
+    }
+  }
+}

@@ -16,7 +16,7 @@ public class CMCreativeModeTabs {
             .icon(() -> CMItems.monster.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(CMItems.monster.get());
-
+                output.accept(CMItems.xun_block_item.get());
             })
             .build());
     public static void register(IEventBus bus){
